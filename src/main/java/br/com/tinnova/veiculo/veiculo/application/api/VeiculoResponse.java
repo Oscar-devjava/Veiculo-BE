@@ -8,5 +8,5 @@ import lombok.Value;
 @Builder
 @Value
 public class VeiculoResponse {
-	private UUID idAutomovel;
+	private UUID idVeiculo;
 }
