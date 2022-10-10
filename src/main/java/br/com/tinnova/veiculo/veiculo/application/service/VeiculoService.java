@@ -18,4 +18,6 @@ public interface VeiculoService {
 
 	VeiculoDetalhadoResponse buscaVeiculoPorId(UUID idVeiculo);
 
+	void deletaVeiculoPorId(UUID idVeiculo);
+
 }
