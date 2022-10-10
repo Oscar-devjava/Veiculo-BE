@@ -39,7 +39,7 @@ public class VeiculoRestController implements VeiculoAPI {
 		log.info("[inicia] VeiculoRestController - getVisualizaTodosVeiculos");
 		VeiculoDetalhadoResponse veiculoDetalhado = veiculoService.buscaVeiculoPorId(idVeiculo);
 		log.info("[finaliza] VeiculoRestController - getVisualizaTodosVeiculos");
-		return null;
+		return veiculoDetalhado;
 	}
 
 	
