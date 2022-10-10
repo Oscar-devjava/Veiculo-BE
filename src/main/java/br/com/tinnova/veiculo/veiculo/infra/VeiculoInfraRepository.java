@@ -43,4 +43,11 @@ public class VeiculoInfraRepository implements VeiculoRepository {
 		return buscaVeiculo;
 	}
 
+	@Override
+	public void deleta(UUID idVeiculo) {
+		log.info("[inicia] VeiculoInfraRepository - deleta ");
+		veiculoSpringDataJPARepository.deleteById(idVeiculo);
+		log.info("[inicia] VeiculoInfraRepository - deleta ");
+	}
+
 }
