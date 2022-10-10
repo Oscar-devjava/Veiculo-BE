@@ -44,6 +44,6 @@ public class VeiculoApplicationService implements VeiculoService {
 		log.info("[inicia] VeiculoApplicationService - cadastraVeiculo");
 		Veiculo veiculo = veiculoRepository.buscaVeiculoPorId(idVeiculo);
 		log.info("[finaliza] VeiculoApplicationService - cadastraVeiculo");		
-		return veiculo;
+		return new VeiculoDetalhadoResponse(veiculo);
 	}
 }
