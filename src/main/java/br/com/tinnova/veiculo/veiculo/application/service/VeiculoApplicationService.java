@@ -46,4 +46,12 @@ public class VeiculoApplicationService implements VeiculoService {
 		log.info("[finaliza] VeiculoApplicationService - cadastraVeiculo");		
 		return new VeiculoDetalhadoResponse(veiculo);
 	}
+
+	@Override
+	public void deletaVeiculoPorId(UUID idVeiculo) {
+		log.info("[inicia] VeiculoApplicationService - deletaVeiculoPorId");
+		veiculoRepository.buscaVeiculoPorId(idVeiculo);
+		veiculoRepository.deleta(idVeiculo);
+		log.info("[inicia] VeiculoApplicationService - deletaVeiculoPorId");
+	}
 }
