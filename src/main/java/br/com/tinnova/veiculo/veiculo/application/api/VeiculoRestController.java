@@ -1,6 +1,7 @@
 package br.com.tinnova.veiculo.veiculo.application.api;
 
 import java.util.List;
+import java.util.UUID;
 
 import javax.validation.Valid;
 
@@ -32,5 +33,15 @@ public class VeiculoRestController implements VeiculoAPI {
 		log.info("[finaliza] VeiculoRestController - getVisualizaTodosVeiculos");
 		return veiculos;
 	}
+
+	@Override
+	public VeiculoDetalhadoResponse getBuscaVeiculoPorId(UUID idVeiculo) {
+		log.info("[inicia] VeiculoRestController - getVisualizaTodosVeiculos");
+		VeiculoDetalhadoResponse veiculoDetalhado = veiculoService.buscaVeiculoPorId(idVeiculo);
+		log.info("[finaliza] VeiculoRestController - getVisualizaTodosVeiculos");
+		return null;
+	}
+
+	
 
 }

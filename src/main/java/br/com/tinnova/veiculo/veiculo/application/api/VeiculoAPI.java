@@ -24,7 +24,7 @@ public interface VeiculoAPI {
 	@ResponseStatus(value = HttpStatus.OK)
 	List<VeiculosListResponse> getVisualizaTodosVeiculos();
 	
-	@GetMapping("{idCliente}")
+	@GetMapping("{idVeiculo}")
 	@ResponseStatus(value = HttpStatus.OK)
-	VeiculoDetalhadoResponse getBuscaVeiculoPorId(@PathVariable UUID idCliente);
+	VeiculoDetalhadoResponse getBuscaVeiculoPorId(@PathVariable UUID idVeiculo);
 }
