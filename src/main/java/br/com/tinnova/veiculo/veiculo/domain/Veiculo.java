@@ -29,8 +29,13 @@ public class Veiculo {
 	@NotBlank
 	private String marca;
 	@NotBlank
+	private String chassi;
+	@NotBlank
+	private String placa;
+	@NotBlank
 	private String cor;
 	@Enumerated(EnumType.STRING)
+	@NotNull
 	private Tipo tipo;
 	@Enumerated(EnumType.STRING)
 	private Tamanho tamanho;

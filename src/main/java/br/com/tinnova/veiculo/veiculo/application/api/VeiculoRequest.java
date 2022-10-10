@@ -12,11 +12,13 @@ import lombok.Value;
 public class VeiculoRequest {
 	@NotEmpty(message = "O campo marca do veículo não pode estar vazio")
 	private String marca;
-	@NotEmpty(message = "O campo marca do veículo não pode estar vazio")
-	private String cor;
-	@NotEmpty(message = "O campo marca do veículo não pode estar vazio")
+	@NotEmpty(message = "O campo chassi do veículo não pode estar vazio")
+	private String chassi;
+	@NotEmpty(message = "O campo placa do veículo não pode estar vazio")
+	private String placa;
+	@NotEmpty(message = "O campo placa do veículo não pode estar vazio")
+	private String cor;	
 	private Tipo tipo;
-	@NotEmpty(message = "O campo marca do veículo não pode estar vazio")
 	private Tamanho tamanho;
 	private LocalDate anoFabricacao;
 	
