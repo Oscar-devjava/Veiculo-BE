@@ -12,6 +12,8 @@ public class VeiculosListResponse {
 	private String marca;
 	private String chassi;
 	private String placa;
+	private Boolean vendido;
+	private String descricao;
 	
 	public static List<VeiculosListResponse> converte(List<Veiculo> lista) {
 		return lista.stream().map(VeiculosListResponse :: new).collect(Collectors.toList());
@@ -23,6 +25,8 @@ public class VeiculosListResponse {
 		this.marca = veiculo.getMarca();
 		this.chassi = veiculo.getChassi();
 		this.placa = veiculo.getPlaca();
+		this.vendido = veiculo.getVendido();
+		this.descricao = veiculo.getDescricao();
 	}
 	
 	

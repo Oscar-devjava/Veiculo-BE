@@ -21,5 +21,7 @@ public class VeiculoRequest {
 	private Tipo tipo;
 	private Tamanho tamanho;
 	private LocalDate anoFabricacao;
+	private Boolean vendido;
+	private String descricao;
 	
 }

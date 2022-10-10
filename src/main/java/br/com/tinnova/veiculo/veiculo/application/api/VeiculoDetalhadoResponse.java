@@ -21,6 +21,8 @@ public class VeiculoDetalhadoResponse {
 	@Enumerated(EnumType.STRING)
 	private Tamanho tamanho;
 	private LocalDate anoFabricacao;
+	private Boolean vendido;
+	private String descricao;
 	private LocalDateTime dataHoraDoCadastro;
 	
 	public VeiculoDetalhadoResponse(Veiculo veiculo) {
@@ -31,6 +33,8 @@ public class VeiculoDetalhadoResponse {
 		this.tipo =veiculo.getTipo();
 		this.tamanho = veiculo.getTamanho();
 		this.anoFabricacao = veiculo.getAnoFabricacao();
+		this.vendido = veiculo.getVendido();
+		this.descricao = veiculo.getDescricao();
 		this.dataHoraDoCadastro = veiculo.getDataHoraDoCadastro();
 	}
 	

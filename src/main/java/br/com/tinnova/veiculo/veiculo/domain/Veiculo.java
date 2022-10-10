@@ -43,6 +43,8 @@ public class Veiculo {
 	private Tamanho tamanho;
 	@NotNull
 	private LocalDate anoFabricacao;
+	private Boolean vendido;
+	private String descricao;
 	
 	private LocalDateTime dataHoraDoCadastro;
 	private LocalDate dataHoraUltimaAlteracao;
@@ -55,6 +57,8 @@ public class Veiculo {
 		this.tipo = veiculoRequest.getTipo();
 		this.tamanho = veiculoRequest.getTamanho();
 		this.anoFabricacao = veiculoRequest.getAnoFabricacao();
+		this.vendido = veiculoRequest.getVendido();
+		this.descricao = veiculoRequest.getDescricao();
 		this.dataHoraDoCadastro = LocalDateTime.now();
 		
 	}
