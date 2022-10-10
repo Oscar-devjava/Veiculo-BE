@@ -6,6 +6,7 @@ import java.util.UUID;
 import javax.validation.Valid;
 
 import org.springframework.http.HttpStatus;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -27,4 +28,8 @@ public interface VeiculoAPI {
 	@GetMapping("{idVeiculo}")
 	@ResponseStatus(value = HttpStatus.OK)
 	VeiculoDetalhadoResponse getBuscaVeiculoPorId(@PathVariable UUID idVeiculo);
+	
+	@DeleteMapping("{idVeiculo}")
+	@ResponseStatus(value = HttpStatus.NO_CONTENT)
+	void deletaVeiculoPorId(@PathVariable UUID idVeiculo);
 }
