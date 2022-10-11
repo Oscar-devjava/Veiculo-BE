@@ -36,5 +36,5 @@ public interface VeiculoAPI {
 	
 	@PatchMapping("{idVeiculo}")
 	@ResponseStatus(value = HttpStatus.NO_CONTENT)
-	void patchAlteraDetalhesDoVeiculo(AlteraDetalhesRequest alteraDetalhesRequest,@PathVariable UUID idVeiculo);
+	void patchAlteraDetalhesDoVeiculo( @RequestBody @Valid  AlteraDetalhesRequest alteraDetalhesRequest,@PathVariable UUID idVeiculo);
 }
