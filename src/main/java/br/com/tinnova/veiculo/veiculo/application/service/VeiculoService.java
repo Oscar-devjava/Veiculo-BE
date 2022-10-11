@@ -3,6 +3,7 @@ package br.com.tinnova.veiculo.veiculo.application.service;
 import java.util.List;
 import java.util.UUID;
 
+import br.com.tinnova.veiculo.veiculo.application.api.AlteraDetalhesRequest;
 import br.com.tinnova.veiculo.veiculo.application.api.VeiculoDetalhadoResponse;
 import br.com.tinnova.veiculo.veiculo.application.api.VeiculoRequest;
 import br.com.tinnova.veiculo.veiculo.application.api.VeiculoResponse;
@@ -17,5 +18,7 @@ public interface VeiculoService {
 	VeiculoDetalhadoResponse buscaVeiculoPorId(UUID idVeiculo);
 
 	void deletaVeiculoPorId(UUID idVeiculo);
+
+	void alteraDetalhesDoVeiulo(AlteraDetalhesRequest alteraDetalhesRequest, UUID idVeiculo);
 
 }

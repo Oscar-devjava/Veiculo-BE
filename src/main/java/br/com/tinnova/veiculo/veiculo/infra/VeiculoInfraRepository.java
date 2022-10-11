@@ -3,6 +3,7 @@ package br.com.tinnova.veiculo.veiculo.infra;
 import java.util.List;
 import java.util.UUID;
 
+import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Repository;
 
@@ -21,9 +22,13 @@ public class VeiculoInfraRepository implements VeiculoRepository {
 	@Override
 	public Veiculo salva(Veiculo veiculo) {
 		log.info("[inicia] VeiculoInfraRepository - salva ");
-		var veiculoCadastrado = veiculoSpringDataJPARepository.save(veiculo);
+		try {
+			veiculoSpringDataJPARepository.save(veiculo);
+		} catch (DataIntegrityViolationException e) {
+			throw APIException.build(HttpStatus.BAD_REQUEST, "Existem dados duplicados");
+		}
 		log.info("[finaliza] VeiculoInfraRepository - salva ");
-		return veiculoCadastrado;
+		return veiculo;
 	}
 
 	@Override
