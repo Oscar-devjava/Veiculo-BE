@@ -3,8 +3,6 @@ package br.com.tinnova.veiculo.veiculo.application.api;
 import java.util.List;
 import java.util.UUID;
 
-import javax.validation.Valid;
-
 import org.springframework.web.bind.annotation.RestController;
 
 import br.com.tinnova.veiculo.veiculo.application.service.VeiculoService;
@@ -19,7 +17,7 @@ public class VeiculoRestController implements VeiculoAPI {
 	private final VeiculoService veiculoService;
 
 	@Override
-	public VeiculoResponse postCadastraNovoVeiculo(@Valid VeiculoRequest veiculoRequest) {
+	public VeiculoResponse postCadastraNovoVeiculo( VeiculoRequest veiculoRequest) {
 		log.info("[inicia] VeiculoRestController - postCadastraNovoVeiculo");
 		VeiculoResponse veiculo = veiculoService.cadastraVeiulo(veiculoRequest);
 		log.info("[finaliza] VeiculoRestController - postCadastraNovoVeiculo");

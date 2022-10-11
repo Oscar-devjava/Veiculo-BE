@@ -11,7 +11,6 @@ import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.validation.Valid;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 
@@ -28,12 +27,8 @@ public class Veiculo {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	@Column(columnDefinition = "UUID", name = "idVeiculo", unique = true, nullable = false, updatable = false)
 	private UUID idVeiculo;
-	@NotBlank
-	private String marca;
-	@NotBlank
-	private String chassi;
-	@NotBlank
-	private String placa;
+	@NotNull
+	private Marca marca;
 	@NotBlank
 	private String cor;
 	@Enumerated(EnumType.STRING)
@@ -49,10 +44,8 @@ public class Veiculo {
 	private LocalDateTime dataHoraDoCadastro;
 	private LocalDate dataHoraUltimaAlteracao;
 	
-	public Veiculo(@Valid VeiculoRequest veiculoRequest) {
+	public Veiculo( VeiculoRequest veiculoRequest) {
 		this.marca = veiculoRequest.getMarca();
-		this.chassi = veiculoRequest.getChassi();
-		this.placa = veiculoRequest.getPlaca();
 		this.cor = veiculoRequest.getCor();
 		this.tipo = veiculoRequest.getTipo();
 		this.tamanho = veiculoRequest.getTamanho();

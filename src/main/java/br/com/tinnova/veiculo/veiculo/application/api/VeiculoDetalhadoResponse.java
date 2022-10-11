@@ -6,15 +6,14 @@ import java.time.LocalDateTime;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
 
+import br.com.tinnova.veiculo.veiculo.domain.Marca;
 import br.com.tinnova.veiculo.veiculo.domain.Tamanho;
 import br.com.tinnova.veiculo.veiculo.domain.Tipo;
 import br.com.tinnova.veiculo.veiculo.domain.Veiculo;
 import lombok.Getter;
 @Getter
 public class VeiculoDetalhadoResponse {
-	private String marca;
-	private String chassi;
-	private String placa;
+	private Marca marca;
 	private String cor;
 	@Enumerated(EnumType.STRING)
 	private Tipo tipo;
@@ -27,8 +26,6 @@ public class VeiculoDetalhadoResponse {
 	
 	public VeiculoDetalhadoResponse(Veiculo veiculo) {
 		this.marca = veiculo.getMarca();
-		this.chassi = veiculo.getChassi();
-		this.placa = veiculo.getPlaca();
 		this.cor = veiculo.getCor();
 		this.tipo =veiculo.getTipo();
 		this.tamanho = veiculo.getTamanho();
