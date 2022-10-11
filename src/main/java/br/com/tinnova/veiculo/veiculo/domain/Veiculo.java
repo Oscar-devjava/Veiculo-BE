@@ -29,6 +29,7 @@ public class Veiculo {
 	@Column(columnDefinition = "UUID", name = "idVeiculo", unique = true, nullable = false, updatable = false)
 	private UUID idVeiculo;
 	@NotNull
+	@Enumerated(EnumType.STRING)
 	private Marca marca;
 	@NotBlank
 	private String cor;

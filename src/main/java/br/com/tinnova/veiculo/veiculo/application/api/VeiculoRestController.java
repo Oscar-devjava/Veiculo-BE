@@ -44,7 +44,7 @@ public class VeiculoRestController implements VeiculoAPI {
 	public void deletaVeiculoPorId(UUID idVeiculo) {
 		log.info("[inicia] VeiculoRestController - deletaVeiculoPorId");
 		veiculoService.deletaVeiculoPorId(idVeiculo);
-		log.info("[inicia] VeiculoRestController - deletaVeiculoPorId");
+		log.info("[finaliza] VeiculoRestController - deletaVeiculoPorId");
 	}
 
 	@Override

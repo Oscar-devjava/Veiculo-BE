@@ -52,7 +52,7 @@ public class VeiculoInfraRepository implements VeiculoRepository {
 	public void deleta(UUID idVeiculo) {
 		log.info("[inicia] VeiculoInfraRepository - deleta ");
 		veiculoSpringDataJPARepository.deleteById(idVeiculo);
-		log.info("[inicia] VeiculoInfraRepository - deleta ");
+		log.info("[finaliza] VeiculoInfraRepository - deleta ");
 	}
 
 }
